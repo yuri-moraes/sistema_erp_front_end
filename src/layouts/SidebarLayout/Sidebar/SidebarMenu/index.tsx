@@ -32,6 +32,7 @@ import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwo
 import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
 import { Tune } from '@mui/icons-material';
+import Add from '@mui/icons-material/Add';
 
 const MenuWrapper = styled(Box)(
   ({ theme }) => `
@@ -217,6 +218,18 @@ function SidebarMenu() {
                   startIcon={<Tune />}
                 >
                   Gerenciar
+                </Button>
+              </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/groups-add"
+                  startIcon={<Add />}
+                >
+                  Adicionar
                 </Button>
               </ListItem>
             </List>

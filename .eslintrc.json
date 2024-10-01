@@ -5,8 +5,9 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "airbnb",
     "airbnb-typescript",
-    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -14,15 +15,13 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "settings": {
     "react": {
-      "pragma": "React",
-      "fragment": "Fragment",
       "version": "detect"
     }
   },

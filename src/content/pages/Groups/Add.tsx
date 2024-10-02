@@ -14,7 +14,7 @@ import {
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import PageTitle from 'src/components/PageTitle';
 import { useNavigate } from 'react-router';
-import PermissionsList from 'src/components/PermissionList';
+import PermissionsList from 'src/components/PermissionsList';
 
 const AddGroup = () => {
   const [requestLoading, setRequestLoading] = useState(true);

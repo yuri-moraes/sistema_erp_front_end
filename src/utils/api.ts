@@ -15,10 +15,13 @@ export const useApi = async <TypeDataResponse>(
   // Lógica de autenticação
 
   try {
+    const token = localStorage.getItem('AUTH_ACCESS');
+
     const request = await axios(`${BASE_URL}/${endpoint}`, {
       method,
       data: method != 'GET' && data,
-      params: method == 'GET' && data
+      params: method == 'GET' && data,
+      headers: withAuth ? { Authorization: `Bearer ${token}` } : {}
     });
 
     return {

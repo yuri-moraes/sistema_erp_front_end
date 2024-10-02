@@ -17,7 +17,12 @@ const Groups = () => {
   const handleGetGroups = async () => {
     const response = await getGroups();
 
-    setGroupsData(response.data.groups);
+    if (response?.data?.groups) {
+      setGroupsData(response.data.groups);
+    } else {
+      console.error('Erro ao obter grupos: ', response.detail);
+    }
+
     setRequestLoading(false);
   };
 
@@ -47,7 +52,11 @@ const Groups = () => {
           transition: 'all .5s'
         }}
       >
-        <GroupsTable refreshList={handleGetGroups} groupsList={groupsData} />
+        {requestLoading ? (
+          <p>Carregando...</p>
+        ) : (
+          <GroupsTable refreshList={handleGetGroups} groupsList={groupsData} />
+        )}
       </Container>
     </PermissionMiddleware>
   );

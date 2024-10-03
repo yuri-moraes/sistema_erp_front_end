@@ -31,7 +31,7 @@ import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwo
 import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwoTone';
 import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
-import { Tune } from '@mui/icons-material';
+import { FormatListBulleted, Tune } from '@mui/icons-material';
 import Add from '@mui/icons-material/Add';
 
 const MenuWrapper = styled(Box)(
@@ -285,7 +285,7 @@ function SidebarMenu() {
                     component={RouterLink}
                     onClick={closeSidebar}
                     to="/tasks"
-                    startIcon={<Tune />}
+                    startIcon={<FormatListBulleted />}
                   >
                     Gerenciar
                   </Button>

@@ -10,17 +10,17 @@ import { useRequests } from 'src/utils/requests';
 
 const Tasks = () => {
   const [requestLoading, setRequestLoading] = useState(true);
-  const [TasksData, setTasksData] = useState<Task[]>([]);
+  const [tasksData, setTasksData] = useState<Task[]>([]);
 
   const { getTasks } = useRequests();
 
   const handleGetTasks = async () => {
     const response = await getTasks();
 
-    if (response?.data?.tasks) setTasksData(response.data.tasks);
-    else console.error('Error ao obter tasks: ', response.detail);
-
-    setRequestLoading(false);
+    if (!response.detail) {
+      setTasksData(response.data.tasks);
+      setRequestLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -30,13 +30,12 @@ const Tasks = () => {
   return (
     <PermissionMiddleware codeName="view_task">
       <Helmet>
-        <title>Tasks</title>
+        <title>Tarefas</title>
       </Helmet>
-
       <PageTitleWrapper>
         <PageTitle
-          heading="Tasks"
-          subHeading="Consulte as tarefas da empresa e execute ações em cada tarefa"
+          heading="Tarefas"
+          subHeading="Consulte as tarefas dos funcionários e execute ações em cada uma delas"
         />
       </PageTitleWrapper>
 
@@ -47,7 +46,7 @@ const Tasks = () => {
           transition: 'all .5s'
         }}
       >
-        <TasksTable tasksList={TasksData} refreshList={handleGetTasks} />
+        <TasksTable tasksList={tasksData} refreshList={handleGetTasks} />
       </Container>
     </PermissionMiddleware>
   );

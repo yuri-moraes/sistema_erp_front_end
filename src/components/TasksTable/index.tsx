@@ -87,20 +87,24 @@ const TasksTable = ({ tasksList, refreshList }: Props) => {
                   <TableCell align="right">
                     {handlePermissionExists('change_task') && (
                       <Tooltip title="Editar tarefa" arrow>
-                        <IconButton color="primary" size="small">
-                          <EditTwoTone
-                            onClick={() => handleEditTask(task.id)}
-                          />
+                        <IconButton
+                          color="primary"
+                          size="small"
+                          onClick={() => handleEditTask(task.id)}
+                        >
+                          <EditTwoTone />
                         </IconButton>
                       </Tooltip>
                     )}
 
                     {handlePermissionExists('delete_task') && (
                       <Tooltip title="Excluir tarefa" arrow>
-                        <IconButton color="error" size="small">
-                          <DeleteTwoTone
-                            onClick={() => handleDeleteTask(task.id)}
-                          />
+                        <IconButton
+                          color="error"
+                          size="small"
+                          onClick={() => handleDeleteTask(task.id)}
+                        >
+                          <DeleteTwoTone />
                         </IconButton>
                       </Tooltip>
                     )}

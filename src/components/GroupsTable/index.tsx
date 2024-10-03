@@ -74,6 +74,7 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                     {handlePermissionExists('change_group') && (
                       <Tooltip title="Editar cargo" arrow>
                         <IconButton
+                          onClick={() => handleEditGroup(group.id)}
                           sx={{
                             '&:hover': {
                               background: theme.colors.primary.lighter
@@ -83,9 +84,7 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                           color="inherit"
                           size="small"
                         >
-                          <EditTwoToneIcon
-                            onClick={() => handleEditGroup(group.id)}
-                          />
+                          <EditTwoToneIcon />
                         </IconButton>
                       </Tooltip>
                     )}
@@ -93,6 +92,7 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                     {handlePermissionExists('delete_group') && (
                       <Tooltip title="Excluir cargo" arrow>
                         <IconButton
+                          onClick={() => handleDeleteGroup(group.id)}
                           sx={{
                             '&:hover': {
                               background: theme.colors.primary.lighter
@@ -102,9 +102,7 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                           color="inherit"
                           size="small"
                         >
-                          <DeleteTwoToneIcon
-                            onClick={() => handleDeleteGroup(group.id)}
-                          />
+                          <DeleteTwoToneIcon />
                         </IconButton>
                       </Tooltip>
                     )}

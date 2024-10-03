@@ -17,12 +17,12 @@ const Loader = (Component) => (props) =>
 // Auth
 const SignIn = Loader(lazy(() => import('src/content/pages/Auth/SignIn')));
 
-//Groups
+// Groups
 const Groups = Loader(lazy(() => import('src/content/pages/Groups/Groups')));
 const AddGroup = Loader(lazy(() => import('src/content/pages/Groups/Add')));
 const EditGroup = Loader(lazy(() => import('src/content/pages/Groups/Edit')));
 
-//Employees
+// Employees
 const Employees = Loader(
   lazy(() => import('src/content/pages/Employees/Employees'))
 );
@@ -33,13 +33,16 @@ const EditEmployee = Loader(
   lazy(() => import('src/content/pages/Employees/Edit'))
 );
 
+// Tasks
+const Tasks = Loader(lazy(() => import('src/content/pages/Tasks/Tasks')));
+
 // Pages
 
 const Overview = Loader(lazy(() => import('src/content/overview')));
 
 // Dashboards
 
-const Tasks = Loader(lazy(() => import('src/content/dashboards/Tasks')));
+//const Tasks = Loader(lazy(() => import('src/content/dashboards/Tasks')));
 
 // Applications
 
@@ -144,6 +147,16 @@ const routes: RouteObject[] = [
         ]
       },
       {
+        path: '',
+        element: <SidebarLayout />,
+        children: [
+          {
+            path: 'tasks',
+            element: <Tasks />
+          }
+        ]
+      },
+      {
         path: '/',
         element: <Overview />
       },
@@ -190,10 +203,10 @@ const routes: RouteObject[] = [
         path: '',
         element: <Navigate to="tasks" replace />
       },
-      {
+      /*{
         path: 'tasks',
         element: <Tasks />
-      },
+      }, */
       {
         path: 'messenger',
         element: <Messenger />

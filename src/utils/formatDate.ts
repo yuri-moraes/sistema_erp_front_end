@@ -1,4 +1,4 @@
-export const UseDate = () => {
+export const useDate = () => {
   const formatDateForAPI = (value: string) => {
     // value = yyyy-mm-ddThh:mm -> dd/mm/yyyy hh:mm
 

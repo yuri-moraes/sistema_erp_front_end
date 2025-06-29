@@ -3,8 +3,8 @@
 Este projeto é uma aplicação web de ERP (Enterprise Resource Planning) desenvolvida para gerenciar diversos aspectos de uma empresa, com funcionalidades que incluem gerenciamento de usuários, grupos, funcionários e outros recursos empresariais. A aplicação conta com um front-end em React e um back-end em Django utilizando o Django REST Framework.
 
 Acesse a aplicação através dos seguintes links:
-- **Front-end**: [Clique aqui](https://sistema-erp-front-end-9gig.vercel.app/)
-- **Back-end**: [Clique aqui](https://sistemaerp-production.up.railway.app/)
+- **Front-end**: [Clique aqui](https://sistema-erp-front-end.vercel.app/)
+- **Back-end**: [Clique aqui](https://sistema-erp-tont.onrender.com)
 
 ## Acesso ao Sistema
 
@@ -69,5 +69,5 @@ No diretório do projeto, você pode executar os seguintes comandos:
 
 ## Link do Front-end e Back-end
 
-- Front-end: [Clique aqui para acessar](https://sistema-erp-front-end-9gig.vercel.app/)
-- Back-end: [Clique aqui para acessar](https://sistemaerp-production.up.railway.app/) [Documentação](https://github.com/yuri-moraes/sistema_erp)
+- Front-end: [Clique aqui para acessar](https://sistema-erp-front-end.vercel.app//)
+- Back-end: [Clique aqui para acessar](https://sistema-erp-tont.onrender.com/) [Documentação](https://github.com/yuri-moraes/sistema_erp)
